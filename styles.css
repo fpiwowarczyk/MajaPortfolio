@@ -44,6 +44,7 @@ Variables
   --clr-green-light: hsl(125, 71%, 66%);
   --clr-secondary: hsla(30, 63%, 54%);
   --clr-black: #222;
+  --clr-cream: #FFFCF0;
   --ff-primary: "Roboto", sans-serif;
   --ff-secondary: "Open Sans", sans-serif;
   --transition: all 0.3s linear;
@@ -53,6 +54,7 @@ Variables
   --dark-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
   --max-width: 1170px;
   --fixed-width: 620px;
+
 }
 /*
 =============== 
@@ -192,9 +194,9 @@ Sections
 ===============
 */
 
-.section-Shock{
-  background: linear-gradient(rgba(231, 235, 10, 0.1), rgba(0, 0, 0, 0.4)),
-  url(./images/Shock.jpg) center/cover no-repeat;
+.section-Home{
+  background:  var(--clr-cream);
+  height: 200px;
 }
 .banner-Shock {
   min-height: 100vh;
@@ -202,17 +204,17 @@ Sections
   place-items: center;
   text-align: center;
 }
-.section-Food {
-  background: linear-gradient(rgba(212, 185, 63, 0.5), rgba(0, 0, 0, 0.4)),
-  url(./images/Food.jpg) center/cover no-repeat;
+.section-coLubie {
+  background:var(--clr-cream);
+  height: 200px;
 }
-.section-Firends{
-  background: linear-gradient(rgba(212, 185, 63, 0.5), rgba(0, 0, 0, 0.4)),
-  url(./images/Friends.jpg) center/cover no-repeat; 
+.section-Prace{
+  background:var(--clr-cream); /*url(./images) center/cover no-repeat*/;
+  height: 200px; 
 }
-.section-End{
-  background: linear-gradient(rgba(88, 77, 24, 0.2), rgba(0, 0, 0, 0.4)),
-  url(./images/End.jpg) center/cover no-repeat; 
+.section-Kontakt{
+  background:var(--clr-cream);
+  height: 200px;
   padding-bottom: 5rem;
 }
 .section-center {
