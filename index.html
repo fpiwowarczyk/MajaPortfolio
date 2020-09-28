@@ -1,26 +1,81 @@
 <!DOCTYPE html>
-<html>
+<html lang = "en">
     <head>
         <meta charset = "UTF-8">
         <meta name = "viewport" content = "with=device-width, initial-scale = 1.0" />
-        <title> Maja Michalska</title>
-
+        <title> Maja Michalska Graphics</title>
+        <!-- font awsome -->
+        <link 
+            rel ="stylesheet"
+            href="./fontawesome-free-5.12.0-web/css/all.min.css"
+        />
         <!-- Styles -->
-        <link rel = "stylesheet" href = "styles.css"/>
+        <link rel="stylesheet" href="styles.css" />
     </head>
     <body>
-        <!-- header -->
+       <div class = "nav-center">
+           <!-- nav header -->
+           <div class = "nav-header">
+               <img src="./logoMajaMDODACTUcos.svg" class = "logo" alt = "logo" />
+               <button class = "nav-toggle">
+                   <i class = "fas fa-bars"></i>
+               </button>
+           </div>
+           <!-- links -->
+           <ul class = "links">
+               <li>
+                    <a href = "index.html">Home</a>
+               </li>
+               <li>
+                   <a href="about.html"> About me</a>
+               </li>
+               <li>
+                   <a href= "contact.html">Contact</a>
+               </li>
+           </ul>
+           <!-- Social media -->
+           <ul class = "social-icons">
+               <li>
+                    <a href = "https://www.facebook.com">
+                        <i class ="fab fa-facebook"></i>
+                    </a>
+               </li>
+               <li>
+                   <a href = "https://www.twitter.com">
+                       <i class="fab fa-twitter"></i>
+                   </a>
+               </li>
+               <li>
+                    <a href = "https://www.google.com">
+                        <i class = "fab fa-behance"></i>
+                    </a>
+               </li>
+               <li>
+                    <a href = "https://www.linkedin.com">
+                        <i class = "fab fa-linkedin"></i>
+                    </a>
+               </li>
+           </ul>
+       </div>
+        <section class = "menu">
+            <!-- Title -->
+            <div class = "title">
+                <h2> MajaMiIlu Graphics</h2>
+                <div class = "underline"></div>
+            </div>
+            <!-- filter buttons -->
+            <div class = "btn-container"></div>
+            <!-- menu items -->
+            <div class="section-center"></div>
+        </section>
 
 
         <!-- footer -->
         <footer class = "section">
-            <p> copyright &copy; backroad trave tours complany
+            <p> copyright &copy;Maja Michalska Companty TEMP TEXT 
                 <span id = "date"></span>
             </p>
         </footer>
-        <a class = "scroll-link top-link" href = "#Start">
-            <i class = "fas fa-arrow-up"></i>
-        </a>
         <!-- JavaScript-->
         <script src = "app.js"></script>
     </body>
