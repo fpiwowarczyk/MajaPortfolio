@@ -188,10 +188,48 @@ nav{
 
 /*
 =============== 
-Menu
+Sections 
 ===============
 */
 
+.section-Shock{
+  background: linear-gradient(rgba(231, 235, 10, 0.1), rgba(0, 0, 0, 0.4)),
+  url(./images/Shock.jpg) center/cover no-repeat;
+}
+.banner-Shock {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+.section-Food {
+  background: linear-gradient(rgba(212, 185, 63, 0.5), rgba(0, 0, 0, 0.4)),
+  url(./images/Food.jpg) center/cover no-repeat;
+}
+.section-Firends{
+  background: linear-gradient(rgba(212, 185, 63, 0.5), rgba(0, 0, 0, 0.4)),
+  url(./images/Friends.jpg) center/cover no-repeat; 
+}
+.section-End{
+  background: linear-gradient(rgba(88, 77, 24, 0.2), rgba(0, 0, 0, 0.4)),
+  url(./images/End.jpg) center/cover no-repeat; 
+  padding-bottom: 5rem;
+}
+.section-center {
+  width: 90vw;
+  margin: 0 auto;
+  max-width: 1170px;
+}
+@media screen and (min-width: 992px) {
+  .section-center {
+    width: 95vw;
+  }
+}
+main {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+}
 .title{
     text-align: center;
   text-transform: capitalize;
