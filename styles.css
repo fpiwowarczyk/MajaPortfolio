@@ -206,7 +206,8 @@ Sections
 }
 .section-coLubie {
   background:var(--clr-cream);
-  height: 200px;
+  height: 400px;
+  
 }
 .section-Prace{
   background:var(--clr-cream); /*url(./images) center/cover no-repeat*/;
