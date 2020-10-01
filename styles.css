@@ -94,9 +94,24 @@ img:not(.logo){
 Navbar
 ===============
 */
-nav{
+nav {
+  background: var(--clr-white);
+  padding: 1rem 1.5rem;
+}
+/* fixed nav */
+.fixed-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
   background: var(--clr-white);
   box-shadow: var(--light-shadow);
+}
+.fixed-nav .links a {
+  color: var(--clr-grey-1);
+}
+.fixed-nav .links a:hover {
+  color: var(--clr-secondary);
 }
 .nav-header {
   display: flex;
@@ -120,32 +135,30 @@ nav{
 .logo{
   height:80px;
 }
+.links-container {
+  height: 0;
+  overflow: hidden;
+  transition: var(--transition);
+}
+.show-links {
+  height: 200px;
+}
 .links a {
-  color: var(--clr-grey-3);
-  font-size: 1rem;
+  background: var(--clr-white);
+  color: var(--clr-grey-5);
+  font-size: 1.1rem;
   text-transform: capitalize;
   letter-spacing: var(--spacing);
   display: block;
-  padding: 0.5rem 1rem;
   transition: var(--transition);
+  font-weight: bold;
+  padding: 0.75rem 0;
 }
 .links a:hover {
-  background: var(--clr-primary-8);
-  color: var(--clr-primary-5);
-  padding-left: 1.5rem;
+  color: var(--clr-grey-1);
 }
 .social-icons {
   display: none;
-}
-/* BY DEFAULT HIDE LINKS */
-.links {
-  height: 0;
- overflow: hidden;
- transition: var(--transition); 
-}
-/* TOGGLE CLASS */
-.show-links {
- height: 10rem;
 }
 @media screen and (min-width: 800px) {
  .nav-center {
@@ -162,19 +175,29 @@ nav{
  .nav-toggle {
    display: none;
  }
+.links-container {
+  height: auto !important;
+}
  .links {
    /* IMPORTANT TO ADD */
    height: auto;
    display: flex;
  }
  .links a {
-   padding: 0;
-   margin: 0 0.5rem;
- }
- .links a:hover {
-   padding: 0;
-   background: transparent;
- }
+  background: transparent;
+  color: var(--clr-black);
+  font-size: 1.1rem;
+  text-transform: capitalize;
+  letter-spacing: var(--spacing);
+  display: block;
+  transition: var(--transition);
+  margin: 0 1rem;
+  font-weight: bold;
+  padding: 0;
+}
+.links a:hover {
+  color: var(--clr-green-dark);
+}
  .social-icons {
    display: flex;
  }
@@ -194,9 +217,9 @@ Sections
 ===============
 */
 
-.section-Home{
+.section-Start{
   background:  var(--clr-cream);
-  height: 200px;
+  height: 800px;
 }
 .banner-Shock {
   min-height: 100vh;
@@ -206,16 +229,16 @@ Sections
 }
 .section-coLubie {
   background:var(--clr-cream);
-  height: 400px;
+  height: 800px;
   
 }
 .section-Prace{
   background:var(--clr-cream); /*url(./images) center/cover no-repeat*/;
-  height: 400px; 
+  height: 800px; 
 }
 .section-Kontakt{
   background:var(--clr-cream);
-  height: 200px;
+  height: 800px;
   padding-bottom: 5rem;
 }
 .section-center {
@@ -237,6 +260,50 @@ main {
     text-align: center;
   text-transform: capitalize;
 }
+
+/*
+=============== 
+Hero
+===============
+*/
+
+.banner {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  text-align: center;
+}
+.container h1 {
+  color: var(--clr-white);
+  text-transform: uppercase;
+}
+.container p {
+  color: var(--clr-white);
+  max-width: 25rem;
+  margin: 0 auto;
+  margin-bottom: 1.25rem;
+}
+@media screen and (min-width: 768px) {
+  .container p {
+    max-width: 40rem;
+  }
+}
+/* sections and title */
+.title h2 {
+  text-align: center;
+  text-transform: uppercase;
+}
+.title span {
+  color: var(--clr-secondary);
+}
+#coLubie,
+#Prace,
+#Kontakt {
+  height: 100vh;
+}
+#services {
+  background: var(--clr-white);
+}
 /*
 =============== 
 Footer
@@ -252,4 +319,38 @@ footer p {
   text-transform: capitalize;
   letter-spacing: var(--spacing);
   margin-bottom: 0;
+}
+
+.top-link {
+  font-size: 1.25rem;
+  position: fixed;
+  bottom: 3rem;
+  right: 3rem;
+  background: var(--clr-secondary);
+  width: 2rem;
+  height: 2rem;
+  display: grid;
+  place-items: center;
+  border-radius: var(--radius);
+  color: var(--clr-white);
+  animation: bounce 2s ease-in-out infinite;
+
+  visibility: hidden;
+  z-index: -100;
+}
+.show-link {
+  visibility: visible;
+  z-index: 100;
+}
+
+@keyframes bounce {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.5);
+  }
+  100% {
+    transform: scale(1);
+  }
 }
