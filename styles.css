@@ -4,7 +4,10 @@ Fonts
 ===============
 */
 @import url("https://fonts.googleapis.com/css?family=Open+Sans|Roboto:400,700&display=swap");
-
+@font-face {
+  font-family: PrahoBlack;
+  src: url(./static/props/Praho-Black.ttf);
+}
 /*
 =============== 
 Variables
@@ -13,7 +16,7 @@ Variables
 
 :root {
   /* dark shades of primary color*/
-  --clr-primary-1: hsl(205, 86%, 17%);
+  --clr-primary-1: #FBEAE6;
   --clr-primary-2: hsl(205, 77%, 27%);
   --clr-primary-3: hsl(205, 72%, 37%);
   --clr-primary-4: hsl(205, 63%, 48%);
@@ -45,8 +48,8 @@ Variables
   --clr-secondary: hsla(30, 63%, 54%);
   --clr-black: #222;
   --clr-cream: #FFFCF0;
-  --ff-primary: "Roboto", sans-serif;
-  --ff-secondary: "Open Sans", sans-serif;
+  --ff-primary: "Open Sans", sans-serif;
+  --ff-secondary: "PrahoBlack";
   --transition: all 0.3s linear;
   --spacing: 0.25rem;
   --radius: 0.5rem;
@@ -73,7 +76,7 @@ html {
 }
 
 body {
-    font-family: var(--ff-secondary);
+    font-family: var(--ff-primary);
     background: var(clr--grey-10);
     color: var(--clr-grey-1);
     line-height:  1.5;
@@ -85,6 +88,11 @@ ul {
 a {
   text-decoration: none;
 }
+
+h2 {
+  font-family: var(--ff-secondary);
+  font-size: 48px;
+}
 img:not(.logo){
   width:500%;
   height:300;
@@ -95,8 +103,14 @@ Navbar
 ===============
 */
 nav {
-  background: var(--clr-white);
-  padding: 1rem 1.5rem;
+  position: absolute;
+  height: 79px;
+  width:100%;
+  left: 0px;
+  top: 0px;
+
+  background: var(--clr-primary-1);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 /* fixed nav */
 .fixed-nav {
@@ -104,8 +118,8 @@ nav {
   top: 0;
   left: 0;
   width: 100%;
-  background: var(--clr-white);
-  box-shadow: var(--light-shadow);
+  background: var(--clr-primary-1);
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
 }
 .fixed-nav .links a {
   color: var(--clr-grey-1);
@@ -117,7 +131,6 @@ nav {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 1rem;
 }
 
 .nav-toggle {
@@ -133,7 +146,11 @@ nav {
   transform: rotate(90deg);
 }
 .logo{
-  height:80px;
+  position: relative;
+  left:-250px;
+  width: 71px;
+  height: 57px;
+  align-items: center;
 }
 .links-container {
   height: 0;
@@ -180,6 +197,7 @@ nav {
 }
  .links {
    /* IMPORTANT TO ADD */
+   position: relative;
    height: auto;
    display: flex;
  }
@@ -275,7 +293,6 @@ Hero
 }
 .container h1 {
   color: var(--clr-white);
-  text-transform: uppercase;
 }
 .container p {
   color: var(--clr-white);
@@ -291,7 +308,6 @@ Hero
 /* sections and title */
 .title h2 {
   text-align: center;
-  text-transform: uppercase;
 }
 .title span {
   color: var(--clr-secondary);
