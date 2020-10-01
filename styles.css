@@ -211,7 +211,7 @@ Sections
 }
 .section-Prace{
   background:var(--clr-cream); /*url(./images) center/cover no-repeat*/;
-  height: 200px; 
+  height: 400px; 
 }
 .section-Kontakt{
   background:var(--clr-cream);
