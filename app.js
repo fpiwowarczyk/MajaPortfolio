@@ -55,7 +55,7 @@ window.addEventListener("scroll", function(){
 
 const scrollLinks = document.querySelectorAll('.scroll-link');
 
-scrollLinks.forEach(function(link){
+scrollLinks.forEach(function(link){ // O tym mówie w trello
     link.addEventListener('click',function(e){
         e.preventDefault();
 
@@ -72,7 +72,6 @@ scrollLinks.forEach(function(link){
         if(navHeight>132){
             position=position+containerHeight;
         }
-        console.log(position);
         window.scrollTo({
             left:0,
             top:position-50,
