@@ -17,9 +17,9 @@ Variables
 :root {
   /* dark shades of primary color*/
   --clr-primary-1: #FBEAE6;
-  --clr-primary-2: hsl(205, 77%, 27%);
-  --clr-primary-3: hsl(205, 72%, 37%);
-  --clr-primary-4: hsl(205, 63%, 48%);
+  --clr-primary-2: #F08F7C;
+  --clr-primary-3: #27284C;
+  --clr-primary-4: #FBAA19;
   /* primary/main color */
   --clr-primary-5: #49a6e9;
   /* lighter shades of primary color */
@@ -27,7 +27,8 @@ Variables
   --clr-primary-7: hsl(205, 90%, 76%);
   --clr-primary-8: hsl(205, 86%, 81%);
   --clr-primary-9: hsl(205, 90%, 88%);
-  --clr-primary-10: hsl(205, 100%, 96%);
+  --clr-primary-10: hsl(205, 100%, 96%) --clr-green-dark
+  
   /* darkest grey - used for headings */
   --clr-grey-1: hsl(209, 61%, 16%);
   --clr-grey-2: hsl(211, 39%, 23%);
@@ -92,6 +93,17 @@ a {
 h2 {
   font-family: var(--ff-secondary);
   font-size: 48px;
+  color: var(--clr-primary-3);
+}
+h1 {
+  font-family: var(--ff-secondary);
+  color: var(--clr-primary-3);
+  font-size: 96px;
+  line-height: 129.3%;
+  /* or 124px */
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+
 }
 img:not(.logo){
   width:500%;
@@ -125,7 +137,7 @@ nav {
   color: var(--clr-grey-1);
 }
 .fixed-nav .links a:hover {
-  color: var(--clr-secondary);
+  color: var(--clr-primary-2);
 }
 .nav-header {
   display: flex;
@@ -172,7 +184,7 @@ nav {
   padding: 0.75rem 0;
 }
 .links a:hover {
-  color: var(--clr-grey-1);
+  color: var(--clr-primary-1);
 }
 .social-icons {
   display: none;
@@ -214,7 +226,7 @@ nav {
   padding: 0;
 }
 .links a:hover {
-  color: var(--clr-green-dark);
+  color: var(--clr-primary-2);
 }
  .social-icons {
    display: flex;
@@ -243,8 +255,34 @@ Sections
   min-height: 100vh;
   display: grid;
   place-items: center;
-  text-align: center;
+  position: absolute;
+  width: 685px;
+  height: 200px;
+  left: 234px;
+  top: 238px;
+  text-align: left;
 }
+.container {
+  position: absolute;
+  width: 696px;
+  height: 53px;
+  left: 240px;
+  top: 700px; 
+  text-decoration-color: var(--clr-primary-3);
+
+}
+.description {
+  font-family:(var(--ff-primary));
+  font-style: normal;
+  font-weight: normal;
+  font-size: 24px;
+  line-height: 126.3%;
+  /* or 30px */
+  letter-spacing: 0.05em;
+  color: (var(--clr-primary-3));
+
+}
+
 .section-coLubie {
   background:var(--clr-cream);
   height: 800px;
