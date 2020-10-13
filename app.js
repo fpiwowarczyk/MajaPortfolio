@@ -21,7 +21,6 @@ navToggle.addEventListener("click",function(){
     const linksHeight = links.getBoundingClientRect().height;
     const containerHeight = linksContainer.getBoundingClientRect().height;
 
-    console.log(containerHeight);
     if(containerHeight===0){
         linksContainer.style.height =  `${linksHeight}px`;
     } else {
@@ -44,7 +43,6 @@ window.addEventListener("scroll", function(){
     } else {
         navbar.classList.remove('fixed-nav');
     }
-    console.log(scrollHeight);
     if(scrollHeight>500){
         topLink.classList.add('show-link'); 
     } else {
@@ -79,3 +77,52 @@ scrollLinks.forEach(function(link){ // O tym mówie w trello
         linksContainer.style.height=0;
     });
 });
+
+/*===================================================
+*
+*                       CANVAS
+* 
+*===================================================*/
+
+var canvas = document.getElementById("canvas");
+var ctx=canvas.getContext("2d");
+
+
+window.addEventListener('DOMContentLoaded',init);
+
+function init(){
+    canvas.width = 1000;
+    canvas.height = 1000;
+    drawing = new Drawing();
+    drawing.triangle(200,200,200,100,100,100,'rgb(255,165,0)');
+    drawing.rectangle();
+    drawing.circle();
+}
+
+class Drawing{
+
+
+    rectangle(){
+        ctx.beginPath();
+        ctx.rect(500, 500, 150, 100);
+        ctx.stroke();
+    }
+    circle(){
+        ctx.beginPath();
+        ctx.arc(300, 300, 40, 0, 2 * Math.PI);
+        ctx.stroke();
+    }
+    triangle(startX,startY,
+            firstVertexX,firstVertexY,
+            secondVertexX,secondVertexY,
+            color){
+        ctx.fillStyle=color;
+        ctx.beginPath();
+        ctx.moveTo(startX,startY);
+        ctx.lineTo(firstVertexX,firstVertexY);
+        ctx.lineTo(secondVertexX,secondVertexY);
+        ctx.lineTo(startX,startY);
+        ctx.fill();
+    }
+}
+

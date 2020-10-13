@@ -249,27 +249,12 @@ Sections
 
 .section-Start{
   background:  var(--clr-cream);
-  height: 800px;
+  height: 1200px;
 }
-.banner-Shock {
-  min-height: 100vh;
-  display: grid;
-  place-items: center;
-  position: absolute;
-  width: 685px;
-  height: 200px;
-  left: 234px;
-  top: 238px;
-  text-align: left;
-}
-.container {
-  position: absolute;
-  width: 696px;
-  height: 53px;
-  left: 240px;
-  top: 700px; 
-  text-decoration-color: var(--clr-primary-3);
 
+.container {
+  position: relative;
+  text-decoration-color: var(--clr-primary-3);
 }
 .description {
   font-family:(var(--ff-primary));
@@ -277,6 +262,7 @@ Sections
   font-weight: normal;
   font-size: 24px;
   line-height: 126.3%;
+  text-align: center;
   /* or 30px */
   letter-spacing: 0.05em;
   color: (var(--clr-primary-3));
@@ -285,16 +271,16 @@ Sections
 
 .section-coLubie {
   background:var(--clr-cream);
-  height: 800px;
+  height: 1200px;
   
 }
 .section-Prace{
   background:var(--clr-cream); /*url(./images) center/cover no-repeat*/;
-  height: 800px; 
+  height: 1200px; 
 }
 .section-Kontakt{
   background:var(--clr-cream);
-  height: 800px;
+  height: 1200px;
   padding-bottom: 5rem;
 }
 .section-center {
@@ -323,17 +309,16 @@ Hero
 ===============
 */
 
+.canvas {
+  background:  white;
+}
 .banner {
   min-height: 100vh;
   display: grid;
   place-items: center;
   text-align: center;
 }
-.container h1 {
-  color: var(--clr-white);
-}
 .container p {
-  color: var(--clr-white);
   max-width: 25rem;
   margin: 0 auto;
   margin-bottom: 1.25rem;
